@@ -42,7 +42,7 @@ object HostName {
     env("HOSTNAME") orElse
       exec("hostname") orElse
       env("gethostname") orElse
-      env("cat /etc/hostname")
+      exec("cat /etc/hostname")
 
   private[hostname] def exec(name: String) = safe { name.!! }
 
