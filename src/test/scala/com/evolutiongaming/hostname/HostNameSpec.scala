@@ -1,12 +1,13 @@
 package com.evolutiongaming.hostname
 
-import org.scalatest.{FunSuite, Matchers}
+import org.scalatest.funsuite.AnyFunSuite
+import org.scalatest.matchers.should.Matchers
 
-class HostNameSpec extends FunSuite with Matchers {
+class HostNameSpec extends AnyFunSuite with Matchers {
 
-  val hostName = HostName()
+  private val hostName = HostName()
 
-  val name = hostName.fold("undefined")(_.toString)
+  private val name = hostName.fold("undefined")(_.toString)
 
   test(s"apply at $name") {
     hostName.isDefined shouldEqual true
