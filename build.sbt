@@ -6,7 +6,7 @@ homepage := Some(new URL("http://github.com/evolution-gaming/hostname"))
 
 startYear := Some(2018)
 
-organizationName := "Evolution Gaming"
+organizationName := "Evolution"
 
 organizationHomepage := Some(url("http://evolution.com"))
 
