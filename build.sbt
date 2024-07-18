@@ -26,3 +26,7 @@ libraryDependencies ++= Seq(
 licenses := Seq(("MIT", url("https://opensource.org/licenses/MIT")))
 
 releaseCrossBuild := true
+
+//addCommandAlias("check", "all versionPolicyCheck Compile/doc")
+addCommandAlias("check", "show version")
+addCommandAlias("build", "+all compile test")
