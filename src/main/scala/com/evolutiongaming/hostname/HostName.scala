@@ -3,9 +3,9 @@ package com.evolutiongaming.hostname
 import java.net.InetAddress
 import java.util.concurrent.Executors
 
-import scala.concurrent.duration._
+import scala.concurrent.duration.*
 import scala.concurrent.{Await, ExecutionContext, Future}
-import scala.sys.process._
+import scala.sys.process.*
 import scala.util.Properties
 import scala.util.control.NonFatal
 
