@@ -29,8 +29,8 @@ jobs:
       - name: setup SBT
         uses: sbt/setup-sbt@v1
 
-      - name: check code
-        run: sbt clean check
+      - name: check code ${{ matrix.scala }}
+        run: sbt ++${{ matrix.scala }} clean check
 
       - name: build ${{ matrix.scala }}
         run: sbt ++${{ matrix.scala }} clean coverage test

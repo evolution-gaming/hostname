@@ -35,7 +35,7 @@ libraryDependencies ++= Seq(
 
 licenses := Seq(("MIT", url("https://opensource.org/licenses/MIT")))
 
-addCommandAlias("check", "versionPolicyCheck; +Compile/doc")
+addCommandAlias("check", "all versionPolicyCheck Compile/doc")
 addCommandAlias("build", "+all compile test")
 
 def crossSettings[T](scalaVersion: String, if3: Seq[T], if2: Seq[T]): Seq[T] = {
