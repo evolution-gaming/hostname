@@ -23,19 +23,20 @@ scalacOptions ++= crossSettings(
   if3 = Seq(),
   if2 = Seq(
     "-Xsource:3",
-  )
+  ),
 )
 
 Compile / doc / scalacOptions ++= Seq("-groups", "-implicits", "-no-link-warnings")
 
 libraryDependencies ++= Seq(
-  "org.scalatest" %% "scalatest"          % "3.2.19" % Test,
-  "org.scalatest" %% "scalatest-funsuite" % "3.2.19" % Test
+  "org.scalatest" %% "scalatest" % "3.2.19" % Test,
+  "org.scalatest" %% "scalatest-funsuite" % "3.2.19" % Test,
 )
 
 licenses := Seq(("MIT", url("https://opensource.org/licenses/MIT")))
 
-addCommandAlias("check", "all versionPolicyCheck Compile/doc")
+addCommandAlias("check", "all scalafmtRepoCheck versionPolicyCheck Compile/doc")
+addCommandAlias("fmt", "scalafmtRepo")
 addCommandAlias("build", "+all compile test")
 
 def crossSettings[T](scalaVersion: String, if3: Seq[T], if2: Seq[T]): Seq[T] = {
